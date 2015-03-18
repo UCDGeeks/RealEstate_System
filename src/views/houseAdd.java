@@ -11,6 +11,13 @@ package views;
  */
 public class houseAdd extends javax.swing.JFrame {
 
+    public static void main(String[] args) {
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new houseAdd().setVisible(true);
+            }
+        });
+    }
     /**
      * Creates new form main
      */
