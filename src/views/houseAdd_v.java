@@ -45,21 +45,19 @@ public class houseAdd_v extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-	//
         jTextField1 = new javax.swing.JTextField();
 	TextPrompt tpjTextField1 = new TextPrompt("Enter Lot Number", jTextField1 );
-	//
-        jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+         jLabel3 = new javax.swing.JLabel();
+         jTextField2 = new javax.swing.JTextField();
 	TextPrompt tpjTextField2 = new TextPrompt("Enter First Name", jTextField2 );
-        jLabel4 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+         jLabel4 = new javax.swing.JLabel();
+         jTextField3 = new javax.swing.JTextField();
 	TextPrompt tpjTextField3 = new TextPrompt("Enter Last Name", jTextField3 );
-        jLabel5 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+         jLabel5 = new javax.swing.JLabel();
+         jTextField4 = new javax.swing.JTextField();
 	TextPrompt tpjTextField4 = new TextPrompt("Enter Price", jTextField4 );
-        jLabel6 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+         jLabel6 = new javax.swing.JLabel();
+         jTextField5 = new javax.swing.JTextField();
 	TextPrompt tpjTextField5 = new TextPrompt("Enter Size in Square Feets", jTextField5 );
         jLabel7 = new javax.swing.JLabel();
         jSlider1 = new javax.swing.JSlider();
@@ -213,6 +211,11 @@ public class houseAdd_v extends javax.swing.JFrame {
         });
 
         jButton3.setText("Reset");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Back");
 
@@ -305,6 +308,16 @@ public class houseAdd_v extends javax.swing.JFrame {
         lblBedrooms.setText(String.valueOf((jSlider1.getValue())));
     }//GEN-LAST:event_jSlider1StateChanged
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        jTextField1.setText("");
+        jTextField2.setText("");
+        jTextField3.setText("");
+        jTextField4.setText("");
+        jTextField5.setText("");
+        jSlider1.setValue(2);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     private void getvalues(){
         int[] valueIntArr;
         valueIntArr= new int[4];
@@ -317,7 +330,6 @@ public class houseAdd_v extends javax.swing.JFrame {
         int price = Integer.parseInt(jTextField4.getText());
         int sqrft = Integer.parseInt(jTextField5.getText());
         int bedrooms = jSlider1.getValue();
-        System.out.println(""+bedrooms);
         
         valueIntArr[0]=lotNumber;
         valueIntArr[1]=price;
