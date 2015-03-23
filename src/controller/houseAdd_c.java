@@ -10,10 +10,11 @@ package controller;
  *
  * @author Anton
  */
-//import views.houseAdd;
-public class houseAdd {
-        public static void main(String[] args) {
+import views.houseAdd;
+public class houseAdd_c {
+    public static void main(String[] args) {
             // TODO code application logic here
             houseAdd houseAddview = new houseAdd();
+            houseAddview.viewHouseadd();
         }
 }
