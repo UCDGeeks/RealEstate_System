@@ -45,15 +45,22 @@ public class houseAdd_v extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+	//
         jTextField1 = new javax.swing.JTextField();
+	TextPrompt tpjTextField1 = new TextPrompt("Enter Lot Number", jTextField1 );
+	//
         jLabel3 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
+	TextPrompt tpjTextField2 = new TextPrompt("Enter First Name", jTextField2 );
         jLabel4 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
+	TextPrompt tpjTextField3 = new TextPrompt("Enter Last Name", jTextField3 );
         jLabel5 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
+	TextPrompt tpjTextField4 = new TextPrompt("Enter Price", jTextField4 );
         jLabel6 = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
+	TextPrompt tpjTextField5 = new TextPrompt("Enter Size in Square Feets", jTextField5 );
         jLabel7 = new javax.swing.JLabel();
         jSlider1 = new javax.swing.JSlider();
         lblBedrooms = new javax.swing.JLabel();
