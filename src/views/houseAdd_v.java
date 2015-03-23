@@ -285,31 +285,31 @@ public class houseAdd_v extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        setVisible(false); //you can't see me!
+
+        setVisible(false);
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        getvalues();
+        //Collect and save the values to a Model. 
+        saveData();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jSlider1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider1StateChanged
-        // TODO add your handling code here:
+        //Change the Label value according to the Slider Value
         lblBedrooms.setText(String.valueOf((jSlider1.getValue())));
     }//GEN-LAST:event_jSlider1StateChanged
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+
         jTextField1.setText("");
         jTextField2.setText("");
         jTextField3.setText("");
@@ -318,12 +318,14 @@ public class houseAdd_v extends javax.swing.JFrame {
         jSlider1.setValue(2);
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void getvalues(){
+    private void saveData(){
+        //Collect and save the values to a Model. 
         int[] valueIntArr;
         valueIntArr= new int[4];
         String[] valueStrArr;
         valueStrArr= new String[2];
         
+        //Get Values
         int lotNumber = Integer.parseInt(jTextField1.getText());
         String fName = jTextField2.getText();
         String lName = jTextField3.getText();
@@ -339,21 +341,9 @@ public class houseAdd_v extends javax.swing.JFrame {
         valueStrArr[0]=fName;
         valueStrArr[1]=lName;
         
+        //Save the values using the controller's method.
         houseAdd controllerObj = new houseAdd();
-        controllerObj.setValuesHouseAdd(valueIntArr,valueStrArr);
-        
-//        Map<String, String> map = new HashMap<String, String>();
-//        Map<String, String> map = new HashMap<>();
-//        map.put("fName", fName);
-//        map.put("lName", lName);
-//        
-//        Map<String, Integer> map2 = new HashMap<>();
-//        map.put("lotNumber", lotNumber);
-//        map.put("price", price);
-//        map.put("sqrft", sqrft);
-//        map.put("bedrooms", bedrooms);
-        
-        
+        controllerObj.setValuesHouseAdd(valueIntArr,valueStrArr);       
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
