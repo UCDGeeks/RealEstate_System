@@ -4,29 +4,31 @@
  * and open the template in the editor.
  */
 package views;
-
+import java.util.*;
 /**
  *
  * @author S.Priyanga
  */
-public class houseAdd extends javax.swing.JFrame {
+import controller.houseAdd;
+public class houseAdd_v extends javax.swing.JFrame {
 
     /**
      * Creates new form main
      */
-    public houseAdd() {
+    public houseAdd_v() {
         initComponents();       
     }
     
     public void viewHouseadd(){
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new houseAdd().setVisible(true);
+                new houseAdd_v().setVisible(true);
                 jSlider1.setMaximum(10);
                 jSlider1.setMinimum(1);
                 
             }
         });
+        
     }
 
     /**
@@ -297,14 +299,42 @@ public class houseAdd extends javax.swing.JFrame {
     }//GEN-LAST:event_jSlider1StateChanged
 
     private void getvalues(){
-//        String name = new String();
-        String lotNumber = jTextField1.getText();
+        int[] valueIntArr;
+        valueIntArr= new int[4];
+        String[] valueStrArr;
+        valueStrArr= new String[2];
+        
+        int lotNumber = Integer.parseInt(jTextField1.getText());
         String fName = jTextField2.getText();
         String lName = jTextField3.getText();
-        String price = jTextField4.getText();
-        String srft = jTextField5.getText();
+        int price = Integer.parseInt(jTextField4.getText());
+        int sqrft = Integer.parseInt(jTextField5.getText());
         int bedrooms = jSlider1.getValue();
         System.out.println(""+bedrooms);
+        
+        valueIntArr[0]=lotNumber;
+        valueIntArr[1]=price;
+        valueIntArr[2]=sqrft;
+        valueIntArr[3]=bedrooms;
+        
+        valueStrArr[0]=fName;
+        valueStrArr[1]=lName;
+        
+        houseAdd controllerObj = new houseAdd();
+        controllerObj.setValuesHouseAdd(valueIntArr,valueStrArr);
+        
+//        Map<String, String> map = new HashMap<String, String>();
+//        Map<String, String> map = new HashMap<>();
+//        map.put("fName", fName);
+//        map.put("lName", lName);
+//        
+//        Map<String, Integer> map2 = new HashMap<>();
+//        map.put("lotNumber", lotNumber);
+//        map.put("price", price);
+//        map.put("sqrft", sqrft);
+//        map.put("bedrooms", bedrooms);
+        
+        
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
