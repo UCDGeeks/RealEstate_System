@@ -3,13 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package realestate;
+
+package controller;
 
 /**
  *
- * @author S.Priyanga
+ * @author Kalana Chandrasiri
  */
-public class RealEstate {
+public class RealState_System {
 
     /**
      * @param args the command line arguments
