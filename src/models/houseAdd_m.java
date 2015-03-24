@@ -11,6 +11,8 @@ package models;
  * @author Anton
  */
 public class houseAdd_m {
+    //Model class which stores the data received by the Controller sent from View.
+    
     private int lotNumber,price,sqrft,bedrooms;
     private String fname,lname;
 
