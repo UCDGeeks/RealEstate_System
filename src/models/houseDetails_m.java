@@ -3,14 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controller;
+package models;
 
 /**
  *
  * @author thisaru
  */
-public class houseDetails {
-    
-    
+public class houseDetails_m {
     
 }
