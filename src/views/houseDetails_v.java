@@ -9,12 +9,12 @@ package views;
  *
  * @author S.Priyanga
  */
-public class houseDetails extends javax.swing.JFrame {
+public class houseDetails_v extends javax.swing.JFrame {
 
     /**
      * Creates new form main
      */
-    public houseDetails() {
+    public houseDetails_v() {
         initComponents();
     }
 
@@ -141,9 +141,7 @@ public class houseDetails extends javax.swing.JFrame {
                     .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel13)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel13)
                     .addComponent(jLabel8)
                     .addComponent(jLabel9)
                     .addComponent(jLabel10)
@@ -357,7 +355,7 @@ public class houseDetails extends javax.swing.JFrame {
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 427, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
@@ -414,7 +412,7 @@ public class houseDetails extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new houseDetails().setVisible(true);
+                new houseDetails_v().setVisible(true);
             }
         });
     }
@@ -455,4 +453,8 @@ public class houseDetails extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField4;
     private javax.swing.JLabel jTitle;
     // End of variables declaration//GEN-END:variables
+
+    public void viewHouseDetails() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
