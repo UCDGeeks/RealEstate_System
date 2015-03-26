@@ -5,10 +5,22 @@
  */
 package controller;
 
+
 /**
  *
  * @author thisaru
  */
+
+import views.houseDetails_v;
+//import models.houseDetails_m;
+
 public class houseDetails {
+    
+    public static void main(String[] args){
+        //using object, call view,
+        
+        houseDetails_v view_houseDetails=new houseDetails_v();
+        view_houseDetails.viewHouseDetails();
+    }
     
 }
