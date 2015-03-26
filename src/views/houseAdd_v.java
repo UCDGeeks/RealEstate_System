@@ -5,6 +5,7 @@
  */
 package views;
 import java.util.*;
+import javax.swing.JOptionPane;
 /**
  *
  * @author S.Priyanga
@@ -306,7 +307,10 @@ public class houseAdd_v extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         //Collect and save the values to a Model. 
-        saveData();
+        boolean status=saveData();
+        if(status==true){
+            JOptionPane.showMessageDialog(rootPane, "Entered details saved successfully", "Data Saved",JOptionPane.INFORMATION_MESSAGE);   
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jSlider1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider1StateChanged
@@ -331,7 +335,7 @@ public class houseAdd_v extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton4MouseClicked
 
-    private void saveData(){
+    private boolean saveData(){
         //Collect and save the values to a Model. 
         int[] valueIntArr;
         valueIntArr= new int[4];
@@ -356,7 +360,8 @@ public class houseAdd_v extends javax.swing.JFrame {
         
         //Save the values using the controller's method.
         houseAdd controllerObj = new houseAdd();
-        controllerObj.setValuesHouseAdd(valueIntArr,valueStrArr);       
+        boolean status=controllerObj.setValuesHouseAdd(valueIntArr,valueStrArr);  
+        return status;
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

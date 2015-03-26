@@ -21,7 +21,7 @@ public class houseAdd {
         view.viewHouseadd();
     }
 
-    public void setValuesHouseAdd(int[] valueArrInt,String[] vlueArrStr){
+    public boolean setValuesHouseAdd(int[] valueArrInt,String[] vlueArrStr){
         //Instantiate the Model and save the received data from View
         houseAdd_m newModel = new houseAdd_m();
         newModel.setLotNumber(valueArrInt[0]);
@@ -42,6 +42,8 @@ public class houseAdd {
         System.out.println("Price: "+model.getFname());
         System.out.println("Square Feet: "+model.getFname());
         System.out.println("Number of Bedrooms: "+model.getFname());
+        
+        return true;
 
     }
 }
