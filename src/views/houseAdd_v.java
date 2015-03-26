@@ -311,8 +311,9 @@ public class houseAdd_v extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         //Collect and save the values to a Model. 
         boolean status=saveData();
+        //If successfully data saved
         if(status==true){
-            JOptionPane.showMessageDialog(rootPane, "Entered details saved successfully", "Data Saved",JOptionPane.INFORMATION_MESSAGE);   
+            JOptionPane.showMessageDialog(rootPane, "Entered details saved successfully", "Data successfully saved",JOptionPane.INFORMATION_MESSAGE);   
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -371,6 +372,7 @@ public class houseAdd_v extends javax.swing.JFrame {
 
                 //Instantiating the houseAdd controller
                 houseAdd controllerObj = new houseAdd();
+                
                 //Save the values using the controller's method.
                 boolean status=controllerObj.setValuesHouseAdd(valueIntArr,valueStrArr);  
                 return status;
