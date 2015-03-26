@@ -46,19 +46,14 @@ public class houseAdd_v extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-	TextPrompt tpjTextField1 = new TextPrompt("Enter Lot Number", jTextField1 );
-         jLabel3 = new javax.swing.JLabel();
-         jTextField2 = new javax.swing.JTextField();
-	TextPrompt tpjTextField2 = new TextPrompt("Enter First Name", jTextField2 );
-         jLabel4 = new javax.swing.JLabel();
-         jTextField3 = new javax.swing.JTextField();
-	TextPrompt tpjTextField3 = new TextPrompt("Enter Last Name", jTextField3 );
-         jLabel5 = new javax.swing.JLabel();
-         jTextField4 = new javax.swing.JTextField();
-	TextPrompt tpjTextField4 = new TextPrompt("Enter Price", jTextField4 );
-         jLabel6 = new javax.swing.JLabel();
-         jTextField5 = new javax.swing.JTextField();
-	TextPrompt tpjTextField5 = new TextPrompt("Enter Size in Square Feets", jTextField5 );
+        jLabel3 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jSlider1 = new javax.swing.JSlider();
         lblBedrooms = new javax.swing.JLabel();
@@ -218,6 +213,11 @@ public class houseAdd_v extends javax.swing.JFrame {
         });
 
         jButton4.setText("Back");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -282,6 +282,7 @@ public class houseAdd_v extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -317,6 +318,13 @@ public class houseAdd_v extends javax.swing.JFrame {
         jTextField5.setText("");
         jSlider1.setValue(2);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        // TODO add your handling code here:
+        home form = new home();
+        form.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton4MouseClicked
 
     private void saveData(){
         //Collect and save the values to a Model. 
