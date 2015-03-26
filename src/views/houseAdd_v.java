@@ -311,6 +311,9 @@ public class houseAdd_v extends javax.swing.JFrame {
         if(status==true){
             JOptionPane.showMessageDialog(rootPane, "Entered details saved successfully", "Data Saved",JOptionPane.INFORMATION_MESSAGE);   
         }
+//        else{
+//            JOptionPane.showMessageDialog(rootPane, "Entered details is not valid. Please check the details and fill all of them", "Data invalid",JOptionPane.ERROR_MESSAGE);               
+//        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jSlider1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider1StateChanged
@@ -342,26 +345,44 @@ public class houseAdd_v extends javax.swing.JFrame {
         String[] valueStrArr;
         valueStrArr= new String[2];
         
-        //Get Values
-        int lotNumber = Integer.parseInt(jTextField1.getText());
-        String fName = jTextField2.getText();
-        String lName = jTextField3.getText();
-        int price = Integer.parseInt(jTextField4.getText());
-        int sqrft = Integer.parseInt(jTextField5.getText());
-        int bedrooms = jSlider1.getValue();
+//        if(jTextField1.getText().equals("")){
+//            return false;
+//        }else{
+            if(jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jSlider1.getValue()==0){
+                JOptionPane.showMessageDialog(rootPane, "Some of the details fields are empty. Please check the details and fill all of them in the correct fromat.", "Empty Values",JOptionPane.ERROR_MESSAGE);               
+                return false;
+            }else{
+                try {
+                    //Get Values
+                    int lotNumber = Integer.parseInt(jTextField1.getText());
+                    int price = Integer.parseInt(jTextField4.getText());
+                    int sqrft = Integer.parseInt(jTextField5.getText());
+                    int bedrooms = jSlider1.getValue();
+
+                    String fName = jTextField2.getText();
+                    String lName = jTextField3.getText();
+                    
+                    valueIntArr[0]=lotNumber;
+                    valueIntArr[1]=price;
+                    valueIntArr[2]=sqrft;
+                    valueIntArr[3]=bedrooms;
+
+                    valueStrArr[0]=fName;
+                    valueStrArr[1]=lName;
+                    
+                    //Save the values using the controller's method.
+                    houseAdd controllerObj = new houseAdd();
+                    boolean status=controllerObj.setValuesHouseAdd(valueIntArr,valueStrArr);  
+                    return status;
+                    
+                } catch (NumberFormatException e) {
+                    JOptionPane.showMessageDialog(rootPane, "Some of the details entered is not in the correct format. Please check the details and fill all of them in the correct fromat.", "Not valid data",JOptionPane.ERROR_MESSAGE);               
+                    return false; 
+                }
+            }
+            
+//        }
         
-        valueIntArr[0]=lotNumber;
-        valueIntArr[1]=price;
-        valueIntArr[2]=sqrft;
-        valueIntArr[3]=bedrooms;
-        
-        valueStrArr[0]=fName;
-        valueStrArr[1]=lName;
-        
-        //Save the values using the controller's method.
-        houseAdd controllerObj = new houseAdd();
-        boolean status=controllerObj.setValuesHouseAdd(valueIntArr,valueStrArr);  
-        return status;
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
