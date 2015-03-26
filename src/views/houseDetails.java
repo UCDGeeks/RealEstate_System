@@ -7,24 +7,15 @@ package views;
 
 /**
  *
- * @author thisaru
+ * @author S.Priyanga
  */
-public class houseDetails_v extends javax.swing.JFrame {
+public class houseDetails extends javax.swing.JFrame {
 
     /**
      * Creates new form main
      */
-    public houseDetails_v() {
+    public houseDetails() {
         initComponents();
-    }
-    
-    public void viewHouseDetails() {
-        //To change body of generated methods, choose Tools | Templates.
-         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new houseDetails_v().setVisible(true);
-            }
-        });
     }
 
     /**
@@ -201,11 +192,6 @@ public class houseDetails_v extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(0, 153, 153));
 
         jButton4.setText("Back");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -253,7 +239,7 @@ public class houseDetails_v extends javax.swing.JFrame {
 
         jLabel17.setFont(new java.awt.Font("Yu Gothic Light", 1, 12)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel17.setText("3. By Price :");
+        jLabel17.setText("1. By Price :");
 
         jTextField3.setText("enter lot number here");
 
@@ -261,7 +247,7 @@ public class houseDetails_v extends javax.swing.JFrame {
 
         jLabel18.setFont(new java.awt.Font("Yu Gothic Light", 1, 12)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel18.setText("4. By Square Feet :");
+        jLabel18.setText("1. By Square Feet :");
 
         jTextField4.setText("enter lot number here");
 
@@ -399,16 +385,6 @@ public class houseDetails_v extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-       this.setVisible(false);
-        
-        home load_home=new home();      // make a object load_home, just for load again home.
-        load_home.setVisible(true);
-       
-        
-    }//GEN-LAST:event_jButton4ActionPerformed
-
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -437,7 +413,7 @@ public class houseDetails_v extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new houseDetails_v().setVisible(true);
+                new houseDetails().setVisible(true);
             }
         });
     }
@@ -478,6 +454,4 @@ public class houseDetails_v extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField4;
     private javax.swing.JLabel jTitle;
     // End of variables declaration//GEN-END:variables
-
-    
 }

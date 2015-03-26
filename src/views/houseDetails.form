@@ -363,9 +363,6 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Back"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
-          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -550,7 +547,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="66" red="66" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="3. By Price :"/>
+            <Property name="text" type="java.lang.String" value="1. By Price :"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField3">
@@ -571,7 +568,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="66" red="66" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="4. By Square Feet :"/>
+            <Property name="text" type="java.lang.String" value="1. By Square Feet :"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField4">
