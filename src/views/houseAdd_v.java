@@ -3,22 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package views;
-import java.util.*;
 /**
  *
- * @author S.Priyanga
+ * @author Anton Perera
  */
+package views;
+import java.util.*;
+import javax.swing.JOptionPane;
 import controller.houseAdd;
+
 public class houseAdd_v extends javax.swing.JFrame {
 
-    /**
-     * Creates new form main
-     */
+    //Creates new houseAdd view and initialize it
     public houseAdd_v() {
         initComponents();       
     }
     
+    //Display the view
     public void viewHouseadd(){
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -46,14 +47,19 @@ public class houseAdd_v extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+	TextPrompt tpjTextField1 = new TextPrompt("Enter Lot Number", jTextField1 );
+         jLabel3 = new javax.swing.JLabel();
+         jTextField2 = new javax.swing.JTextField();
+	TextPrompt tpjTextField2 = new TextPrompt("Enter First Name", jTextField2 );
+         jLabel4 = new javax.swing.JLabel();
+         jTextField3 = new javax.swing.JTextField();
+	TextPrompt tpjTextField3 = new TextPrompt("Enter Last Name", jTextField3 );
+         jLabel5 = new javax.swing.JLabel();
+         jTextField4 = new javax.swing.JTextField();
+	TextPrompt tpjTextField4 = new TextPrompt("Enter Price", jTextField4 );
+         jLabel6 = new javax.swing.JLabel();
+         jTextField5 = new javax.swing.JTextField();
+	TextPrompt tpjTextField5 = new TextPrompt("Enter Size in Square Feets", jTextField5 );
         jLabel7 = new javax.swing.JLabel();
         jSlider1 = new javax.swing.JSlider();
         lblBedrooms = new javax.swing.JLabel();
@@ -294,14 +300,21 @@ public class houseAdd_v extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
-        setVisible(false);
-        dispose();
+        //Cancel the House Add and Go back to the Home window
+        home form = new home();
+        form.setVisible(true);
+        
+        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         //Collect and save the values to a Model. 
-        saveData();
+        boolean status=saveData();
+        //If successfully data saved
+        if(status==true){
+            JOptionPane.showMessageDialog(rootPane, "Entered details saved successfully", "Data successfully saved",JOptionPane.INFORMATION_MESSAGE);   
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jSlider1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider1StateChanged
@@ -310,7 +323,7 @@ public class houseAdd_v extends javax.swing.JFrame {
     }//GEN-LAST:event_jSlider1StateChanged
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-
+        //Reset all the fields
         jTextField1.setText("");
         jTextField2.setText("");
         jTextField3.setText("");
@@ -320,38 +333,57 @@ public class houseAdd_v extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
-        // TODO add your handling code here:
+        //Go back to the Home window
         home form = new home();
         form.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton4MouseClicked
 
-    private void saveData(){
+    private boolean saveData(){
         //Collect and save the values to a Model. 
         int[] valueIntArr;
         valueIntArr= new int[4];
         String[] valueStrArr;
         valueStrArr= new String[2];
         
-        //Get Values
-        int lotNumber = Integer.parseInt(jTextField1.getText());
-        String fName = jTextField2.getText();
-        String lName = jTextField3.getText();
-        int price = Integer.parseInt(jTextField4.getText());
-        int sqrft = Integer.parseInt(jTextField5.getText());
-        int bedrooms = jSlider1.getValue();
+        if(jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jSlider1.getValue()==0){
+            //If the textfields are empty. At least one of them.
+            JOptionPane.showMessageDialog(rootPane, "Some of the details fields are empty. Please check the details and fill all of them in the correct fromat.", "Empty Values",JOptionPane.ERROR_MESSAGE);               
+            return false;
+        }else{
+            try {
+                //Get Values
+                int lotNumber = Integer.parseInt(jTextField1.getText());
+                int price = Integer.parseInt(jTextField4.getText());
+                int sqrft = Integer.parseInt(jTextField5.getText());
+                int bedrooms = jSlider1.getValue();
+
+                String fName = jTextField2.getText();
+                String lName = jTextField3.getText();
+
+                //Assign values to the array
+                valueIntArr[0]=lotNumber;
+                valueIntArr[1]=price;
+                valueIntArr[2]=sqrft;
+                valueIntArr[3]=bedrooms;
+
+                valueStrArr[0]=fName;
+                valueStrArr[1]=lName;
+
+                //Instantiating the houseAdd controller
+                houseAdd controllerObj = new houseAdd();
+                
+                //Save the values using the controller's method.
+                boolean status=controllerObj.setValuesHouseAdd(valueIntArr,valueStrArr);  
+                return status;
+
+            } catch (NumberFormatException e) {
+                //If string values entered instead of numbers for the numerical values required fields.
+                JOptionPane.showMessageDialog(rootPane, "Some of the details entered is not in the correct format. Please check the details and fill all of them in the correct fromat.", "Not valid data",JOptionPane.ERROR_MESSAGE);               
+                return false; 
+            }
+        }
         
-        valueIntArr[0]=lotNumber;
-        valueIntArr[1]=price;
-        valueIntArr[2]=sqrft;
-        valueIntArr[3]=bedrooms;
-        
-        valueStrArr[0]=fName;
-        valueStrArr[1]=lName;
-        
-        //Save the values using the controller's method.
-        houseAdd controllerObj = new houseAdd();
-        controllerObj.setValuesHouseAdd(valueIntArr,valueStrArr);       
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

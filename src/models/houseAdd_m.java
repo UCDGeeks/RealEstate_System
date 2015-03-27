@@ -8,7 +8,7 @@ package models;
 
 /**
  *
- * @author Anton
+ * @author Anton Perera
  */
 public class houseAdd_m {
     //Model class which stores the data received by the Controller sent from View.
