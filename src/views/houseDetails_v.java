@@ -59,15 +59,19 @@ public class houseDetails_v extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
+		TextPrompt tpjTextField1 = new TextPrompt(" Enter Lot Number here", jTextField1 );
         jButton5 = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
+		TextPrompt tpjTextField2 = new TextPrompt("Enter fist name or last name here", jTextField2 );
         jButton6 = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
+		TextPrompt tpjTextField3 = new TextPrompt("Enter price here", jTextField3 );
         jButton7 = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
+		TextPrompt tpjTextField4 = new TextPrompt("Enter square feet here", jTextField4 );
         jButton8 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -239,15 +243,12 @@ public class houseDetails_v extends javax.swing.JFrame {
         jLabel15.setForeground(new java.awt.Color(102, 102, 102));
         jLabel15.setText("1. By Lot Number :");
 
-        jTextField1.setText("enter lot number here");
-
         jButton5.setText("Search");
 
         jLabel16.setFont(new java.awt.Font("Yu Gothic Light", 1, 12)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(102, 102, 102));
         jLabel16.setText("2. By Name :");
 
-        jTextField2.setText("enter first or last name here");
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
@@ -260,15 +261,11 @@ public class houseDetails_v extends javax.swing.JFrame {
         jLabel17.setForeground(new java.awt.Color(102, 102, 102));
         jLabel17.setText("3. By Price :");
 
-        jTextField3.setText("enter lot number here");
-
         jButton7.setText("Search");
 
         jLabel18.setFont(new java.awt.Font("Yu Gothic Light", 1, 12)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(102, 102, 102));
         jLabel18.setText("4. By Square Feet :");
-
-        jTextField4.setText("enter lot number here");
 
         jButton8.setText("Search");
 
