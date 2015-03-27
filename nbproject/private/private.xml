@@ -3,11 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/thisaru/NetBeansProjects/RealEstate_System/src/views/houseAdd_v.java</file>
-            <file>file:/home/thisaru/NetBeansProjects/RealEstate_System/src/controller/houseDetails.java</file>
-            <file>file:/home/thisaru/NetBeansProjects/RealEstate_System/src/views/houseDetails_v.java</file>
-            <file>file:/home/thisaru/NetBeansProjects/RealEstate_System/src/controller/houseAdd.java</file>
-            <file>file:/home/thisaru/NetBeansProjects/RealEstate_System/src/views/TextPrompt.java</file>
+            <file>file:/D:/RealEstate_System/src/controller/RealState_System.java</file>
+            <file>file:/D:/RealEstate_System/src/views/main.java</file>
+            <file>file:/D:/RealEstate_System/src/views/home.java</file>
         </group>
     </open-files>
 </project-private>
