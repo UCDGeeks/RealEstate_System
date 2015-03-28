@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package views;
+import controller.houseDetails;
 
 /**
  *
@@ -59,19 +60,15 @@ public class houseDetails_v extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-		TextPrompt tpjTextField1 = new TextPrompt(" Enter Lot Number here", jTextField1 );
         jButton5 = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
-		TextPrompt tpjTextField2 = new TextPrompt("Enter fist name or last name here", jTextField2 );
         jButton6 = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
-		TextPrompt tpjTextField3 = new TextPrompt("Enter price here", jTextField3 );
         jButton7 = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
-		TextPrompt tpjTextField4 = new TextPrompt("Enter square feet here", jTextField4 );
         jButton8 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -244,6 +241,11 @@ public class houseDetails_v extends javax.swing.JFrame {
         jLabel15.setText("1. By Lot Number :");
 
         jButton5.setText("Search");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jLabel16.setFont(new java.awt.Font("Yu Gothic Light", 1, 12)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(102, 102, 102));
@@ -415,6 +417,18 @@ public class houseDetails_v extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4MouseClicked
 
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        //String lotNum=jTextField1.getText();
+        String type="lot_num";
+        int lotNum = Integer.parseInt(jTextField1.getText());
+        
+        //create a object houseDetails
+        houseDetails objectForController=new houseDetails();
+        objectForController.setHouseDetailsInt(lotNum,type);
+                
+    }//GEN-LAST:event_jButton5ActionPerformed
+
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -484,6 +498,13 @@ public class houseDetails_v extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField4;
     private javax.swing.JLabel jTitle;
     // End of variables declaration//GEN-END:variables
+
+    private void searchData(int value) {
+        
+        //create a object houseDetails
+        houseDetails objectForController=new houseDetails();
+        
+    }
 
     
 }
