@@ -4,18 +4,28 @@
  * and open the template in the editor.
  */
 package views;
+import controller.houseDetails;
 
 /**
  *
- * @author S.Priyanga
+ * @author thisaru
  */
-public class houseDetails extends javax.swing.JFrame {
+public class houseDetails_v extends javax.swing.JFrame {
 
     /**
      * Creates new form main
      */
-    public houseDetails() {
+    public houseDetails_v() {
         initComponents();
+    }
+    
+    public void viewHouseDetails() {
+        //To change body of generated methods, choose Tools | Templates.
+         java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new houseDetails_v().setVisible(true);
+            }
+        });
     }
 
     /**
@@ -141,9 +151,7 @@ public class houseDetails extends javax.swing.JFrame {
                     .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel13)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel13)
                     .addComponent(jLabel8)
                     .addComponent(jLabel9)
                     .addComponent(jLabel10)
@@ -194,6 +202,16 @@ public class houseDetails extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(0, 153, 153));
 
         jButton4.setText("Back");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -222,15 +240,17 @@ public class houseDetails extends javax.swing.JFrame {
         jLabel15.setForeground(new java.awt.Color(102, 102, 102));
         jLabel15.setText("1. By Lot Number :");
 
-        jTextField1.setText("enter lot number here");
-
         jButton5.setText("Search");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jLabel16.setFont(new java.awt.Font("Yu Gothic Light", 1, 12)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(102, 102, 102));
         jLabel16.setText("2. By Name :");
 
-        jTextField2.setText("enter first or last name here");
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
@@ -241,17 +261,13 @@ public class houseDetails extends javax.swing.JFrame {
 
         jLabel17.setFont(new java.awt.Font("Yu Gothic Light", 1, 12)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel17.setText("1. By Price :");
-
-        jTextField3.setText("enter lot number here");
+        jLabel17.setText("3. By Price :");
 
         jButton7.setText("Search");
 
         jLabel18.setFont(new java.awt.Font("Yu Gothic Light", 1, 12)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel18.setText("1. By Square Feet :");
-
-        jTextField4.setText("enter lot number here");
+        jLabel18.setText("4. By Square Feet :");
 
         jButton8.setText("Search");
 
@@ -357,7 +373,7 @@ public class houseDetails extends javax.swing.JFrame {
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 427, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
@@ -380,11 +396,38 @@ public class houseDetails extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+       this.setVisible(false);
+        
+        home load_home=new home();      // make a object load_home, just for load again home.
+        load_home.setVisible(true);
+       
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4MouseClicked
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        //String lotNum=jTextField1.getText();
+        String type="lot_num";
+        int lotNum = Integer.parseInt(jTextField1.getText());
+        
+        //create a object houseDetails
+        houseDetails objectForController=new houseDetails();
+        objectForController.setHouseDetailsInt(lotNum,type);
+                
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     
     public static void main(String args[]) {
@@ -414,7 +457,7 @@ public class houseDetails extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new houseDetails().setVisible(true);
+                new houseDetails_v().setVisible(true);
             }
         });
     }
@@ -455,4 +498,13 @@ public class houseDetails extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField4;
     private javax.swing.JLabel jTitle;
     // End of variables declaration//GEN-END:variables
+
+    private void searchData(int value) {
+        
+        //create a object houseDetails
+        houseDetails objectForController=new houseDetails();
+        
+    }
+
+    
 }

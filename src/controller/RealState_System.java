@@ -6,6 +6,9 @@
 
 package controller;
 
+import javax.swing.JFrame;
+import views.main;
+
 /**
  *
  * @author Kalana Chandrasiri
@@ -16,7 +19,9 @@ public class RealState_System {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
         // TODO code application logic here
+         
     }
     
 }
