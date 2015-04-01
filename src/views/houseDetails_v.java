@@ -60,15 +60,19 @@ public class houseDetails_v extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
+		TextPrompt tpjTextField1 = new TextPrompt(" Enter Lot Number here", jTextField1 );
         jButton5 = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
+		TextPrompt tpjTextField2 = new TextPrompt("Enter fist name or last name here", jTextField2 );
         jButton6 = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
+		TextPrompt tpjTextField3 = new TextPrompt("Enter price here", jTextField3 );
         jButton7 = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
+		TextPrompt tpjTextField4 = new TextPrompt("Enter square feet here", jTextField4 );
         jButton8 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);

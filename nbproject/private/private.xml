@@ -3,7 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/BSC%20in%20CS/3yr%20Sem%201%20-UCD/DSA%20in%20Java/Project/Source/src/views/houseAdd_v.java</file>
+            <file>file:/home/thisaru/NetBeansProjects/RealEstate_System/src/controller/houseDetails.java</file>
+            <file>file:/home/thisaru/NetBeansProjects/RealEstate_System/src/views/houseDetails_v.java</file>
+            <file>file:/home/thisaru/NetBeansProjects/RealEstate_System/src/models/houseDetails_m.java</file>
         </group>
     </open-files>
 </project-private>
