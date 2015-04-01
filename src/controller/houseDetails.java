@@ -43,8 +43,15 @@ public class houseDetails {
             
         }else if(type=="price"){
             newModel.setPrice(value);
+            
+            //Display the saved data on Console
+            System.out.println("price is: "+model.getPrice());
+            
         }else if(type=="square_feet"){
             newModel.setSquareFeet(value);
+            
+            //Display the saved data on Console
+            System.out.println("square feet is: "+model.getsquareFeet());
         }
         
     }
@@ -52,7 +59,7 @@ public class houseDetails {
     
     
     
-    public void setHouseDetailsString(String value, String type) {
+    public void setHouseDetailsString(String value) {
         
         //Instantiate the Model and save the received data from View
         houseDetails_m newModel = new houseDetails_m();
@@ -61,6 +68,9 @@ public class houseDetails {
         this.model=newModel;
         
         newModel.setName(value); 
+        
+         //Display the saved data on Console
+         System.out.println("By Name: "+model.getName());
     }
     
     

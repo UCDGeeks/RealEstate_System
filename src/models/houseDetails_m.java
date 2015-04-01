@@ -48,4 +48,8 @@ public class houseDetails_m {
         return square_feet;
     }
     
+    
+    public String getName(){
+        return name;
+    }
 }

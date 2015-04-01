@@ -258,18 +258,33 @@ public class houseDetails_v extends javax.swing.JFrame {
         });
 
         jButton6.setText("Search");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jLabel17.setFont(new java.awt.Font("Yu Gothic Light", 1, 12)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(102, 102, 102));
         jLabel17.setText("3. By Price :");
 
         jButton7.setText("Search");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         jLabel18.setFont(new java.awt.Font("Yu Gothic Light", 1, 12)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(102, 102, 102));
         jLabel18.setText("4. By Square Feet :");
 
         jButton8.setText("Search");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -428,6 +443,37 @@ public class houseDetails_v extends javax.swing.JFrame {
         objectForController.setHouseDetailsInt(lotNum,type);
                 
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        //String type="name";
+        String name=jTextField2.getText();
+        
+        //create a object houseDetails
+        houseDetails objectForController=new houseDetails();
+        objectForController.setHouseDetailsString(name);
+        
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        String type="price";
+        int price=Integer.parseInt(jTextField3.getText());
+        
+        //create a object houseDetails
+        houseDetails objectForController=new houseDetails();
+        objectForController.setHouseDetailsInt(price, type);
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+        String type="square_feet";
+        int square_feet=Integer.parseInt(jTextField4.getText());
+        
+        //create a object houseDetails
+        houseDetails objectForController=new houseDetails();
+        objectForController.setHouseDetailsInt(square_feet, type);
+    }//GEN-LAST:event_jButton8ActionPerformed
 
     
     public static void main(String args[]) {
