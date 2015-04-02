@@ -23,7 +23,7 @@ public class json_reader {
  
 	try {
  
-		Object obj = parser.parse(new FileReader("f:\\test.json"));
+		Object obj = parser.parse(new FileReader("src/assets/data/records.json"));
  
 		JSONObject jsonObject = (JSONObject) obj;
  
