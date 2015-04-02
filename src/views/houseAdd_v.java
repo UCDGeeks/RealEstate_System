@@ -11,6 +11,9 @@ package views;
 import java.util.*;
 import javax.swing.JOptionPane;
 import controller.houseAdd;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.json.simple.parser.ParseException;
 
 public class houseAdd_v extends javax.swing.JFrame {
 
@@ -310,7 +313,12 @@ public class houseAdd_v extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         //Collect and save the values to a Model. 
-        boolean status=saveData();
+        boolean status = false;
+        try {
+            status = saveData();
+        } catch (ParseException ex) {
+            Logger.getLogger(houseAdd_v.class.getName()).log(Level.SEVERE, null, ex);
+        }
         //If successfully data saved
         if(status==true){
             JOptionPane.showMessageDialog(rootPane, "Entered details saved successfully", "Data successfully saved",JOptionPane.INFORMATION_MESSAGE);   
@@ -339,7 +347,7 @@ public class houseAdd_v extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton4MouseClicked
 
-    private boolean saveData(){
+    private boolean saveData() throws ParseException{
         //Collect and save the values to a Model. 
         int[] valueIntArr;
         valueIntArr= new int[4];
