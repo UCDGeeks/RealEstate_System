@@ -8,16 +8,25 @@ package controller;
 
 /**
  *
- * @author Anton Perera
+ * @author Anton Perera, Thisaru Saduranga
  */
 import views.houseAdd_v;
 import models.houseAdd_m;
+
+import models.houseDetails_m;
+import views.houseDetails_v;
+
 import org.json.simple.parser.ParseException;
-public class houseAdd {
+
+public class manageHouse {
+    
+/***********************************************************
+************** House Add Section Functionality *************    
+***********************************************************/
     public houseAdd_m model;
     
-    public static void main(String[] args) {
-        //Display the View
+    public void addHouse() {
+        //Display the House Add View
         houseAdd_v view = new houseAdd_v();
         view.viewHouseadd();
     }
