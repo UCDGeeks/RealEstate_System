@@ -1,15 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @author: Anton Perera, Thisaru Saduranga
  */
 
 package controller;
-
-/**
- *
- * @author Anton Perera, Thisaru Saduranga
- */
 import views.houseAdd_v;
 import models.houseAdd_m;
 
