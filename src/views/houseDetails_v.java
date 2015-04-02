@@ -5,6 +5,7 @@
  */
 package views;
 import controller.houseDetails;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -60,19 +61,15 @@ public class houseDetails_v extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-		TextPrompt tpjTextField1 = new TextPrompt(" Enter Lot Number here", jTextField1 );
         jButton5 = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
-		TextPrompt tpjTextField2 = new TextPrompt("Enter fist name or last name here", jTextField2 );
         jButton6 = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
-		TextPrompt tpjTextField3 = new TextPrompt("Enter price here", jTextField3 );
         jButton7 = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
-		TextPrompt tpjTextField4 = new TextPrompt("Enter square feet here", jTextField4 );
         jButton8 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -244,6 +241,12 @@ public class houseDetails_v extends javax.swing.JFrame {
         jLabel15.setForeground(new java.awt.Color(102, 102, 102));
         jLabel15.setText("1. By Lot Number :");
 
+        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField1KeyTyped(evt);
+            }
+        });
+
         jButton5.setText("Search");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -260,6 +263,11 @@ public class houseDetails_v extends javax.swing.JFrame {
                 jTextField2ActionPerformed(evt);
             }
         });
+        jTextField2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField2KeyTyped(evt);
+            }
+        });
 
         jButton6.setText("Search");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -272,6 +280,12 @@ public class houseDetails_v extends javax.swing.JFrame {
         jLabel17.setForeground(new java.awt.Color(102, 102, 102));
         jLabel17.setText("3. By Price :");
 
+        jTextField3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField3KeyTyped(evt);
+            }
+        });
+
         jButton7.setText("Search");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -282,6 +296,12 @@ public class houseDetails_v extends javax.swing.JFrame {
         jLabel18.setFont(new java.awt.Font("Yu Gothic Light", 1, 12)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(102, 102, 102));
         jLabel18.setText("4. By Square Feet :");
+
+        jTextField4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField4KeyTyped(evt);
+            }
+        });
 
         jButton8.setText("Search");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -439,13 +459,27 @@ public class houseDetails_v extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         //String lotNum=jTextField1.getText();
-        String type="lot_num";
-        int lotNum = Integer.parseInt(jTextField1.getText());
+        
+        if(jTextField1.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Some of the details fields are empty. Please check the details and fill all of them in the correct fromat.", "Empty Values",JOptionPane.ERROR_MESSAGE);               
+        }else{
+        
+            try{
+               int lotNum = Integer.parseInt(jTextField1.getText()); 
+               
+                String type="lot_num";
+        
         
         //create a object houseDetails
         houseDetails objectForController=new houseDetails();
         objectForController.setHouseDetailsInt(lotNum,type);
-                
+        
+            }catch(NumberFormatException e){
+                JOptionPane.showMessageDialog(rootPane, "Some of the details entered is not in the correct format. Please check the details and fill all of them in the correct fromat.", "Not valid data",JOptionPane.ERROR_MESSAGE);               
+            }
+        }
+        
+            
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -478,6 +512,34 @@ public class houseDetails_v extends javax.swing.JFrame {
         houseDetails objectForController=new houseDetails();
         objectForController.setHouseDetailsInt(square_feet, type);
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jTextField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyTyped
+        // when type textField1:
+        jTextField2.setText("");
+        jTextField3.setText("");
+        jTextField4.setText("");
+    }//GEN-LAST:event_jTextField1KeyTyped
+
+    private void jTextField2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField2KeyTyped
+        // when type textField2::
+        jTextField1.setText("");
+        jTextField3.setText("");
+        jTextField4.setText("");             
+    }//GEN-LAST:event_jTextField2KeyTyped
+
+    private void jTextField3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField3KeyTyped
+        // when type textField3::
+        jTextField1.setText("");
+        jTextField2.setText("");
+        jTextField4.setText("");           
+    }//GEN-LAST:event_jTextField3KeyTyped
+
+    private void jTextField4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField4KeyTyped
+        // when type textField4::
+        jTextField1.setText("");
+        jTextField2.setText("");
+        jTextField3.setText("");              
+    }//GEN-LAST:event_jTextField4KeyTyped
 
     
     public static void main(String args[]) {
