@@ -11,17 +11,8 @@ package views;
  */
 public class main extends javax.swing.JFrame {
 
-    /**
-     * Creates new form main
-     */
-    public main() {
-        initComponents();
-    }
 
     
-
-    
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -116,7 +107,7 @@ public class main extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-   public static void main(String args[]) {
+    public void displayMain() {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -147,7 +138,7 @@ public class main extends javax.swing.JFrame {
                 new main().setVisible(true);
            }
        });
- }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
@@ -155,4 +146,10 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jTitle;
     // End of variables declaration//GEN-END:variables
+
+    public main() {
+        initComponents();
+        displayMain();
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
