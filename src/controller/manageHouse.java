@@ -25,8 +25,8 @@ public class manageHouse {
 ***********************************************************/
     public houseAdd_m model;
     
-    public static void main(String[] args) {
-        //Display the View
+    public void addHouse() {
+        //Display the House Add View
         houseAdd_v view = new houseAdd_v();
         view.viewHouseadd();
     }
