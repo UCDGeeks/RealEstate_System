@@ -17,10 +17,10 @@ public class RealState {
     /**
      * load main view
      */
-    public void loadMain() {
-        main viewMain = new main();
-        viewMain.main();
-    }
+//    public void loadMain() {
+//        main mainObj = new main();
+//        mainObj.main();
+//    }
     
     };
 }
