@@ -12,6 +12,7 @@ package controller;
  */
 import views.houseAdd_v;
 import models.houseAdd_m;
+import org.json.simple.parser.ParseException;
 public class houseAdd {
     public houseAdd_m model;
     
@@ -21,7 +22,7 @@ public class houseAdd {
         view.viewHouseadd();
     }
 
-    public boolean setValuesHouseAdd(int[] valueArrInt,String[] vlueArrStr){
+    public boolean setValuesHouseAdd(int[] valueArrInt,String[] vlueArrStr) throws ParseException{
         //Instantiate the Model and save the received data from View
         houseAdd_m newModel = new houseAdd_m();
         newModel.setLotNumber(valueArrInt[0]);
@@ -38,12 +39,12 @@ public class houseAdd {
         newModel.setValuestoStore(valueArrInt,vlueArrStr);
         
         //Display the saved data on Console
-        System.out.println("Lot Number: "+model.getFname());
-        System.out.println("First Name: "+model.getFname());
-        System.out.println("Last Name: "+model.getFname());
-        System.out.println("Price: "+model.getFname());
-        System.out.println("Square Feet: "+model.getFname());
-        System.out.println("Number of Bedrooms: "+model.getFname());
+//        System.out.println("Lot Number: "+model.getFname());
+//        System.out.println("First Name: "+model.getFname());
+//        System.out.println("Last Name: "+model.getFname());
+//        System.out.println("Price: "+model.getFname());
+//        System.out.println("Square Feet: "+model.getFname());
+//        System.out.println("Number of Bedrooms: "+model.getFname());
         
         return true;
 

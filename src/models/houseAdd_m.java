@@ -5,6 +5,9 @@
  */
 
 package models;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 /**
  *
@@ -64,10 +67,13 @@ public class houseAdd_m {
         return lname;
     }
 
-    public void setValuestoStore(int[] valueArrInt,String[] vlueArrStr){
+    public void setValuestoStore(int[] valueArrInt,String[] vlueArrStr) throws ParseException{
         
         JSONQueue theQueue = new JSONQueue();
-        theQueue.insert(null,valueArrInt,vlueArrStr);        
+        theQueue.insert(null,valueArrInt,vlueArrStr);   
+//        JSONParser parser = new JSONParser();
+//        JSONObject json = (JSONObject) parser.parse("{\"lotnumber\": 0,\"price\": 0,\"sqrft\": 0,\"bedrooms\": 0,\"fName\": \"as\",\"lName\": \"sd\"}");
+//        theQueue.insert(json,valueArrInt,vlueArrStr);        
     }
     
     
