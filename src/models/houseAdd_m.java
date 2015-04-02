@@ -64,7 +64,11 @@ public class houseAdd_m {
         return lname;
     }
 
-    
+    public void setValuestoStore(int[] valueArrInt,String[] vlueArrStr){
+        
+        JSONQueue theQueue = new JSONQueue();
+        theQueue.insert(null,valueArrInt,vlueArrStr);        
+    }
     
     
 }

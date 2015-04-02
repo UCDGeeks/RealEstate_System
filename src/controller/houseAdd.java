@@ -35,6 +35,8 @@ public class houseAdd {
         //Assign the newModel in to the class Property model.
         this.model=newModel;
 
+        newModel.setValuestoStore(valueArrInt,vlueArrStr);
+        
         //Display the saved data on Console
         System.out.println("Lot Number: "+model.getFname());
         System.out.println("First Name: "+model.getFname());
