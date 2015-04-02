@@ -461,7 +461,7 @@ public class houseDetails_v extends javax.swing.JFrame {
         //String lotNum=jTextField1.getText();
         
         if(jTextField1.getText().equals("")){
-            JOptionPane.showMessageDialog(rootPane, "Some of the details fields are empty. Please check the details and fill all of them in the correct fromat.", "Empty Values",JOptionPane.ERROR_MESSAGE);               
+            JOptionPane.showMessageDialog(rootPane, " Please Fill this field.", "Empty Values",JOptionPane.ERROR_MESSAGE);               
         }else{
         
             try{
@@ -475,7 +475,7 @@ public class houseDetails_v extends javax.swing.JFrame {
         objectForController.setHouseDetailsInt(lotNum,type);
         
             }catch(NumberFormatException e){
-                JOptionPane.showMessageDialog(rootPane, "Some of the details entered is not in the correct format. Please check the details and fill all of them in the correct fromat.", "Not valid data",JOptionPane.ERROR_MESSAGE);               
+                JOptionPane.showMessageDialog(rootPane, "Please check and fill this field in the correct fromat.", "Not valid data",JOptionPane.ERROR_MESSAGE);               
             }
         }
         
@@ -485,6 +485,10 @@ public class houseDetails_v extends javax.swing.JFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
         //String type="name";
+        
+        
+        
+        
         String name=jTextField2.getText();
         
         //create a object houseDetails
@@ -495,22 +499,56 @@ public class houseDetails_v extends javax.swing.JFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
-        String type="price";
-        int price=Integer.parseInt(jTextField3.getText());
+        
+            // TODO add your handling code here:
+        //String type="name";
+        
+        if(jTextField3.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, " Please Fill this field.", "Empty Values",JOptionPane.ERROR_MESSAGE);               
+        }else{
+        
+            try{
+                String type="price";
+                int price=Integer.parseInt(jTextField3.getText()); 
+               
         
         //create a object houseDetails
         houseDetails objectForController=new houseDetails();
         objectForController.setHouseDetailsInt(price, type);
+        
+            }catch(NumberFormatException e){
+                JOptionPane.showMessageDialog(rootPane, "Please check and fill this field in the correct fromat.", "Not valid data",JOptionPane.ERROR_MESSAGE);               
+            }
+        }
+             
+        
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
-        String type="square_feet";
-        int square_feet=Integer.parseInt(jTextField4.getText());
+        
+            // TODO add your handling code here:
+        //String type="name";
+        
+        if(jTextField4.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, " Please Fill this field.", "Empty Values",JOptionPane.ERROR_MESSAGE);               
+        }else{
+        
+            try{
+                 String type="square_feet";
+                 int square_feet=Integer.parseInt(jTextField4.getText());; 
+               
         
         //create a object houseDetails
         houseDetails objectForController=new houseDetails();
         objectForController.setHouseDetailsInt(square_feet, type);
+        
+            }catch(NumberFormatException e){
+                JOptionPane.showMessageDialog(rootPane, "Please check and fill this field in the correct fromat.", "Not valid data",JOptionPane.ERROR_MESSAGE);               
+            }
+        }
+                
+        
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jTextField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyTyped
