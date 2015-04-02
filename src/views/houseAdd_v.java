@@ -10,7 +10,8 @@
 package views;
 import java.util.*;
 import javax.swing.JOptionPane;
-import controller.houseAdd;
+//import controller.houseAdd;
+import controller.manageHouse;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.json.simple.parser.ParseException;
@@ -379,7 +380,8 @@ public class houseAdd_v extends javax.swing.JFrame {
                 valueStrArr[1]=lName;
 
                 //Instantiating the houseAdd controller
-                houseAdd controllerObj = new houseAdd();
+//                houseAdd controllerObj = new houseAdd();
+                manageHouse controllerObj = new manageHouse();
                 
                 //Save the values using the controller's method.
                 boolean status=controllerObj.setValuesHouseAdd(valueIntArr,valueStrArr);  
