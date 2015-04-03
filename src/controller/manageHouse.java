@@ -31,30 +31,9 @@ public class manageHouse {
 
     public boolean setValuesHouseAdd(int[] valueArrInt,String[] vlueArrStr) throws ParseException{
         //Instantiate the Model and save the received data from View
-        houseAdd_m newModel = new houseAdd_m();
-        newModel.setLotNumber(valueArrInt[0]);
-        newModel.setPrice(valueArrInt[1]);
-        newModel.setSqrft(valueArrInt[2]);
-        newModel.setBedrooms(valueArrInt[3]);
-
-        newModel.setFname(vlueArrStr[0]);
-        newModel.setLname(vlueArrStr[1]);
-        
-        //Assign the newModel in to the class Property model.
-        this.model=newModel;
-
-        newModel.setValuestoStore(valueArrInt,vlueArrStr);
-        
-        //Display the saved data on Console
-//        System.out.println("Lot Number: "+model.getFname());
-//        System.out.println("First Name: "+model.getFname());
-//        System.out.println("Last Name: "+model.getFname());
-//        System.out.println("Price: "+model.getFname());
-//        System.out.println("Square Feet: "+model.getFname());
-//        System.out.println("Number of Bedrooms: "+model.getFname());
-        
+        houseAdd_m newModel = new houseAdd_m(); 
+        newModel.setValuestoStore(valueArrInt,vlueArrStr);        
         return true;
-
     }
     
     public void houseDetails() {

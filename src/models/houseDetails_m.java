@@ -1,12 +1,9 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package models;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import org.json.simple.JSONObject;
-import org.json.simple.JSONArray;
-import org.json.simple.parser.ParseException;
-import org.json.simple.parser.JSONParser;
-import java.util.Arrays;
-import connections.json_reader;
 
 /**
  *
@@ -54,13 +51,5 @@ public class houseDetails_m {
     
     public String getName(){
         return name;
-    }
-    
-    public void retriveData(){
-        json_reader getdata=new json_reader();
-        getdata.get();
-        
-        
-        
     }
 }
