@@ -9,7 +9,8 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author thisaru
+ * @author Thisaru Sanduranga, Sajeeka Mayomi
+ * 
  */
 public class houseDetails_v extends javax.swing.JFrame {
 

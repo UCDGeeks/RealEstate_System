@@ -2,7 +2,7 @@ package views;
 
 /**
  *
- * @author S.Priyanga
+ * @author Srimal Priyanga
  */
 public class main extends javax.swing.JFrame {
 
