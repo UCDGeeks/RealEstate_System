@@ -18,9 +18,7 @@ public class RealState {
      * load main view
      */
 //    public void loadMain() {
-//        main mainObj = new main();
-//        mainObj.main();
-//    }
-    
-    };
+        main viewMain = new main();
+        viewMain.displayMain();
+    }
 }
