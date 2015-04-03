@@ -1,2 +1,2 @@
-lotNumber:1,price:1,sqrft:1,bedrooms:2,fName:q,lName:q,
-lotNumber:1,price:1,sqrft:1,bedrooms:2,fName:w,lName:w,
+lotNumber:1 price:1 sqrft:1 bedrooms:2 fName:q lName:q,
+lotNumber:1 price:1 sqrft:1 bedrooms:2 fName:w lName:w,

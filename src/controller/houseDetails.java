@@ -32,6 +32,8 @@ public class houseDetails {
         
         if(type == "lot_num"){
             newModel.setLotNumber(value);
+             
+            newModel.getHousesbyLotNumber(value); 
             
             //Display the saved data on Console
             System.out.println("Lot Number: "+model.getLotNum());
