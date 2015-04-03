@@ -1,5 +1,5 @@
 /**
- * @author: Anton Perera
+ * @author: Anton Perera, Sajeeka Mayomi
  */
 
 package models;
