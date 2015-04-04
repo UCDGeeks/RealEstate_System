@@ -78,7 +78,6 @@ public class houseDetails_m {
             while (matcher.find()) {
                 System.out.println(matcher.group(1));
             }
-            
         }
         
         return null;
