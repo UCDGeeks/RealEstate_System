@@ -6,7 +6,7 @@ Real Estate System for a company to manage their Real Estate details efficiently
 # Overview
 Project prosentation 
 Download:
-https://github.com/UCDGeeks/RealEstate_System/blob/master/DSA%20Project%20Presentation/Real%20State%20System.pdf
+https://github.com/UCDGeeks/RealEstate_System/raw/master/DSA%20Project%20Presentation/Real%20State%20System.pdf
 
 ## Quick start
 
