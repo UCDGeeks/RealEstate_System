@@ -1,0 +1,4 @@
+lotNumber:41 price:33 sqrft:333 bedrooms:3333 fName:3f lName:3L,
+lotNumber:7 price:11 sqrft:111 bedrooms:1111 fName:1f lName:1L,
+lotNumber:50 price:44 sqrft:444 bedrooms:4444 fName:4f lName:4L,
+lotNumber:8 price:22 sqrft:222 bedrooms:2222 fName:2f lName:2L,
